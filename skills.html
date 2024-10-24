@@ -24,7 +24,7 @@
       display: flex;
       justify-content: center;
       text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
-      margin-top: 65px;
+      margin-top: 80px;
     }
 
     nav {
@@ -89,7 +89,7 @@
     }
 
     .skill-box {
-      width: 200px;
+      width: 250px;
       height: 200px;
       background: none;
       color: #ffffff;
@@ -181,19 +181,62 @@
         cursor: pointer;
         transition: transform 0.3s ease;
       }
+
+      .left a{
+  text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+  transition: color 0.5s ease;
+  text-decoration: none;
+  transition: none;
+  color:inherit;
+
+}
+
+.dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+
   </style>
   <body>
     <main>
       <header>
         <nav>
-          <div class="left">Sachin Suresh</div>
+          <div class="left"><a href="index.html">Sachin Suresh</div></a>
           <div class="center"></div>
           <div class="right">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="/">About</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="skills.html">Skills</a></li>
-              <li><a href="/">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                  <a href="mailto:sachin.samprit@gmail.com">Email</a>
+                  <a href="tel:+919886083024">Phone</a>
+                  <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/">LinkedIn</a>
+                </div>
+              </li>
             </ul>
           </div>
         </nav>
@@ -202,11 +245,13 @@
         <h1>My Skills</h1>
         <h1>TECHNICAL</h1>
         <div class="container">
-          <div class="skill-box"><img src="assets/2.png" \ /></div>
+          <div class="skill-box"><img src="assets/java.png" \ /></div>
           <div class="skill-box"><img src="assets/py.png" \ /></div>
           <div class="skill-box"><img src="assets/2.png" \ /></div>
           <div class="skill-box"><img src="assets/css.png" \ /></div>
           <div class="skill-box"><img src="assets/js.png" \ /></div>
+          <div class="skill-box"><img src="assets/c++.png" \ /></div>
+          <div class="skill-box"><img src="assets/c.png" \ /></div>
           
         </div>
         <hr />

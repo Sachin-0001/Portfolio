@@ -63,7 +63,6 @@
         text-decoration: none;
         text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
         font-size: 1.2rem;
-        
       }
 
       .left {
@@ -77,10 +76,10 @@
         justify-content: space-around;
         margin: 80px 0;
       }
-      .leftsec .button{
-        padding:25px;
+      .leftsec .button {
+        padding: 25px;
       }
-        
+
       .firstsec > div {
         width: 30%;
       }
@@ -164,36 +163,42 @@
       .logo:nth-child(5) img {
         transition-delay: 1s;
       }
+      .logo:nth-child(6) img {
+        transition-delay: 1.2s;
+      }
+      .logo:nth-child(7) img {
+        transition-delay: 1.4s;
+      }
 
       .show .logos img {
         opacity: 1;
         transform: translateX(0);
       }
 
-      footer{
+      footer {
         display: flex;
         background-color: #04043d;
-        height:250px;
+        height: 250px;
         text-align: center;
         align-items: center;
       }
 
-      #footh{
+      #footh {
         color: rgba(255, 255, 255, 0.523);
         font-size: 1.2rem;
         text-align: center;
         margin-left: 600px;
       }
 
-      .footericons img{             
+      .footericons img {
         display: flex;
         justify-content: center;
-        width:100px;
-        margin:0,10px;
+        width: 100px;
+        margin: 0, 10px;
         padding: 23px;
       }
 
-      .footericons{
+      .footericons {
         display: flex;
         justify-content: center;
         margin-top: 46px;
@@ -201,90 +206,157 @@
         margin-bottom: 50px;
       }
 
-      .fi{
+      .fi {
         display: flex;
         padding: 2px;
       }
 
-      .fi:hover{
+      .fi:hover {
         transform: scale(1.5);
         cursor: pointer;
         transition: transform 0.3s ease;
       }
 
       .bt {
-         width: 220px;
+        width: 220px;
         height: 50px;
         border: 1.5px solid #ffffff;
         outline: none;
         color: #fff;
-       background: #111;
-       cursor: pointer;
+        background: #111;
+        cursor: pointer;
         position: relative;
         z-index: 0;
-       border-radius: 10px;
-}
+        border-radius: 10px;
+      }
 
-.bt:before {
-    content: '';
-    background: linear-gradient(45deg, #00d5ff, #0d5b5e, #470784, #2251c7, #717adce0, #002bff, #7a00ff, #15172d, #07aaeb);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
+      .bt:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #00d5ff,
+          #0d5b5e,
+          #470784,
+          #2251c7,
+          #717adce0,
+          #002bff,
+          #7a00ff,
+          #15172d,
+          #07aaeb
+        );
 
-.bt:active {
-    color: #000
-}
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+      }
 
-.bt:active:after {
-    background: transparent;
-}
+      .bt:active {
+        color: #000;
+      }
 
-.bt:hover:before {
-    opacity: 1;
-}
+      .bt:active:after {
+        background: transparent;
+      }
 
-.bt:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
+      .bt:hover:before {
+        opacity: 1;
+      }
 
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
+      .bt:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
 
-.bt:active{
-  transform: translateY(20);
-}
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
 
-.left a{
-  text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
-  transition: color 0.5s ease;
-  text-decoration: none;
-  transition: none;
-  color:inherit;
+      .bt:active {
+        transform: translateY(20);
+      }
 
-}
+      .left a {
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        transition: color 0.5s ease;
+        text-decoration: none;
+        transition: none;
+        color: inherit;
+      }
 
+      #project {
+        font-size: 3rem;
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        animation: neon 2s ease-in-out infinite;
+        text-align: center;
+        margin-top: 150px;
+      }
+      .projects {
+        display: flex;
+      }
+
+      .projects img {
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .projects .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 23px;
+        font-style: italic;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
     </style>
   </head>
 
@@ -296,9 +368,18 @@
         <div class="right">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="/">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="/">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Contact</a>
+              <div class="dropdown-content">
+                <a href="mailto:sachin.samprit@gmail.com">Email</a>
+                <a href="tel:+919886083024">Phone</a>
+                <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/"
+                  >LinkedIn</a
+                >
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
@@ -311,12 +392,10 @@
           <div>and I am a,</div>
           <span id="element"></span>
           <div class="button">
-            <a href="MyResume.pdf" download="resume">
-            <button class="bt" type="button">DOWNLOAD RESUME</button>
+            <a href="assets/MyResume.pdf" download="resume">
+              <button class="bt" type="button">DOWNLOAD RESUME</button>
             </a>
           </div>
-
-          
         </div>
         <div class="rightsec">
           <img src="assets/bg1.png" />
@@ -345,38 +424,54 @@
           <div class="logo hidden">
             <img src="assets/js.png" />
           </div>
+          <div class="logo hidden">
+            <img src="assets/c++.png" />
+          </div>
+          <div class="logo hidden">
+            <img src="assets/c.png" />
+          </div>
         </div>
       </section>
+      <br />
+      <br />
+      <div class="projects"></div>
+
+      <h1 id="project">PROJECTS</h1>
+      <div class="projects">
+        <div class="left">
+          <img src="assets/py.png" />
+        </div>
+        <div class="right">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            alias optio, tempora animi atque pariatur sit ut nesciunt adipisci,
+            doloribus autem, totam eum nostrum nihil suscipit quod minima quos?
+            Architecto.
+          </p>
+        </div>
+      </div>
     </main>
-    <br>
-    <br>
-    <div class="projects">
-
-    </div>
-
-
 
     <footer>
       <div class="footer">
-        
         <div class="footericons">
           <div class="fi">
-          <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/">
-            <img src="assets/linkedin.png" alt="LinkedIn" />
-          </a>
+            <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/">
+              <img src="assets/linkedin.png" alt="LinkedIn" />
+            </a>
           </div>
           <div class="fi">
-          <a href="https://github.com/Sachin-0001">
-            <img src="assets/github.png" alt="GitHub" />
-          </a>
+            <a href="https://github.com/Sachin-0001">
+              <img src="assets/github.png" alt="GitHub" />
+            </a>
           </div>
           <div class="fi">
-          <a href="https://www.instagram.com/__sachin_suresh_/">
-            <img src="assets/instagram.png" alt="Instagram" />
-          </a>
+            <a href="https://www.instagram.com/__sachin_suresh_/">
+              <img src="assets/instagram.png" alt="Instagram" />
+            </a>
           </div>
         </div>
-          <p id="footh">&#169;2024 Sachin Suresh. All rights reserved.</p>
+        <p id="footh">&#169;2024 Sachin Suresh. All rights reserved.</p>
       </div>
     </footer>
 
@@ -415,6 +510,23 @@
         ],
         typeSpeed: 50,
       });
+
+      //     const phoneNumber = document.getElementById("phoneNumber");
+
+      // // Add a click event listener to the phone number
+      // phoneNumber.addEventListener("click", function () {
+      //   // The phone number to be copied
+      //   const phoneNumberText = phoneNumber.textContent;
+
+      //   // Copy the phone number to the clipboard
+      //   navigator.clipboard.writeText(phoneNumberText).then(function () {
+      //     // Show a success message or do something else
+      //     console.log("Phone number copied to clipboard");
+      //   }, function () {
+      //     // Show an error message or do something else
+      //     console.log("Failed to copy phone number to clipboard");
+      //   });
+      // });
     </script>
   </body>
 </html>

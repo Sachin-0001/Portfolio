@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: rgb(4, 4, 79);
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #04043d, #000000);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 65px;
+        background-color: rgb(12 12 54);
+        /* background: linear-gradient(to right, #04043d, #000000); */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        list-style: none;
+        text-decoration: none;
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        font-size: 1.2rem;
+      }
+
+      .left {
+        font-size: 2rem;
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        animation: neon 2s ease-in-out infinite;
+      }
+
+      .left a {
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        transition: color 0.5s ease;
+        text-decoration: none;
+        transition: none;
+        color: inherit;
+      }
+
+      footer{
+        display: flex;
+        background-color: #04043d;
+        height:250px;
+        text-align: center;
+        align-items: center;
+      }
+
+      #footh{
+        color: rgba(255, 255, 255, 0.523);
+        font-size: 1.2rem;
+        text-align: center;
+        margin-left: 600px;
+      }
+
+      .footericons img{             
+        display: flex;
+        justify-content: center;
+        width:50px;
+        margin:0,10px;
+        padding: 23px;
+      }
+
+      .footericons{
+        display: flex;
+        justify-content: center;
+        margin-top: 46px;
+        margin-left: 588px;
+        margin-bottom: 50px;
+      }
+
+      .fi{
+        display: flex;
+        padding: 2px;
+      }
+
+      .fi:hover{
+        transform: scale(1.5);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .edu span {
+        font-size: 40px;
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        margin-bottom: 100px;
+      }
+      .about span {
+        font-size: 40px;
+        text-shadow: 0 0 5px #00a2ff, 0 0 10px #00a2ff, 0 0 15px #00a2ff;
+        margin-bottom: 100px;
+        position: relative;
+        top: 250px;
+      }
+
+      .edu {
+        margin-top: 120px;
+      }
+
+      .edu hr {
+        background: #6969c4;
+        border: 0;
+        height: 4px;
+        margin: 80px;
+        margin-bottom: 0;
+      }
+      .box {
+        display: flex;
+      }
+
+      .box .vertical {
+        width: 1px;
+        height: 93px;
+        background: #6969c4;
+        margin-left: 50px;
+        margin: 0 316px;
+      }
+
+      .vertical-title {
+        position: relative;
+        top: 100px;
+        font-size: 30px;
+        width: 150px;
+      }
+
+      .vertical-desc {
+        width: 150px;
+        color: grey;
+        font-size: 20px;
+        position: relative;
+        top: 39px;
+      }
+      .vertical-desc .sch {
+        width: 150px;
+        color: grey;
+        font-size: 20px;
+        position: relative;
+        top: -1px;
+      }
+
+      .dur {
+        position: relative;
+        top: -90px;
+        left: -64px;
+        font-size: 25px;
+        width: 200px;
+      } 
+
+      .abpa {
+        margin-top: 150px;
+        font-size: 25px;
+        /* width: 1988px; */
+        position: relative;
+        top: 140px;
+        display: flex;
+        align-items: center;
+        padding: 71px;
+        padding-top: 23px;
+        line-height: 2;
+        font-family: sans-serif;
+        color: #6969c4;
+        margin-bottom:150px;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left"><a href="index.html">Sachin Suresh</a></div>
+        <div class="center"></div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                  <a href="mailto:sachin.samprit@gmail.com">Email</a>
+                  <a href="tel:+919886083024">Phone</a>
+                  <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/">LinkedIn</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="edu">
+        <span>Education</span>
+        <hr />
+        <div class="box">
+          <div class="vertical">
+            <div class="vertical-title">10th</div>
+            <div class="dur">2008-2021</div>
+            <div class="vertical-desc">
+              <p class="sch">CARMEL SCHOOL ICSE 97%</p>
+            </div>
+          </div>
+          <div class="vertical">
+            <div class="vertical-title">12th</div>
+            <div class="dur">2021-2023</div>
+            <div class="vertical-desc">
+              <p>DAYANANDA SAGAR PU COLLEGE STATE 95.2%</p>
+            </div>
+          </div>
+          <div class="vertical">
+            <div class="vertical-title">BE-CSE</div>
+            <div class="dur">2023-Present</div>
+            <div class="vertical-desc">
+              <p>DSCE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <span>About Me</span>
+        <div class="abpa">
+          I am a passionate learner with a love for both coding and cricket. As
+          someone who has had the privilege of representing cricket at the zonal
+          level, I have developed qualities like discipline, resilience, and
+          teamwork, which have shaped not only my athletic journey but also my
+          approach to coding. I thrive on problem-solving and enjoy diving deep
+          into the world of web development and Java programming, always looking
+          for ways to innovate and create solutions that make a real impact.
+          Whether it’s building dynamic web applications or working on a project
+          with a team, I bring the same energy and commitment that I show on the
+          cricket field. My ultimate goal is to blend my passion for technology
+          with the skills I’ve learned through sports to make meaningful
+          contributions in both areas.
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer">
+          
+          <div class="footericons">
+            <div class="fi">
+            <a href="https://www.linkedin.com/in/sachin-suresh-b9929a1b7/">
+              <img src="assets/linkedin.png" alt="LinkedIn" />
+            </a>
+            </div>
+            <div class="fi">
+            <a href="https://github.com/Sachin-0001">
+              <img src="assets/github.png" alt="GitHub" />
+            </a>
+            </div>
+            <div class="fi">
+            <a href="https://www.instagram.com/__sachin_suresh_/">
+              <img src="assets/instagram.png" alt="Instagram" />
+            </a>
+            </div>
+          </div>
+            <p id="footh">&#169;2024 Sachin Suresh. All rights reserved.</p>
+        </div>
+      </footer>
+  </body>
+</html>
