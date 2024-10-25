@@ -358,6 +358,122 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      /* Responsive adjustments */
+@media (max-width: 768px) {
+  /* General scaling */
+  body {
+    font-size: 0.9rem;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .left {
+    font-size: 1.5rem;
+  }
+
+  /* Header section adjustments */
+  .firstsec {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .firstsec > div {
+    width: 80%;
+    text-align: center;
+  }
+
+  .leftsec {
+    font-size: 2.5rem;
+    width: 80%;
+    height: auto;
+  }
+
+  .rightsec img {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  /* Skills section */
+  .secondsec {
+    font-size: 1.5rem;
+  }
+
+  .logos img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+
+  /* Projects section */
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #footh {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .footericons {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .footericons img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further scaling down for small devices */
+  .left {
+    font-size: 1.2rem;
+  }
+
+  .firstsec {
+    margin-top: 100px;
+  }
+
+  .secondsec {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .leftsec,
+  .rightsec img {
+    width: 200px;
+    height: auto;
+  }
+}
+
     </style>
   </head>
 
