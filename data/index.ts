@@ -1,6 +1,6 @@
 export const navItems = [
   { name: "Home", link: "#home" },
-  { name: "About", link: "#about" },
+  // { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#techstack" },
   { name: "Contact", link: "#contact" },
@@ -82,7 +82,7 @@ export const projects = [
   {
     id: 2,
     title: "Visit South Africa",
-    des: "Visit South Africa is a travel guide showcasing South Africa’s rich culture, wildlife, and breathtaking landscapes.",
+    des: "Visit South Africa is a travel guide showcasing South Africa's rich culture, wildlife, and breathtaking landscapes.",
     img: "/p2.png",
     iconLists: ["/2.png", "/css.png", "/js.png"],
     link: "https://visit-sa.vercel.app/",
@@ -102,6 +102,30 @@ export const projects = [
     img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://code-chronicles-five.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "FairFare",
+    des: "FairFare aims to reduce ride booking cancellation during peak hours which add to the inconvience of th",
+    img: "/ff.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/py.png", "/mongodb.png"],
+    link: "https://fairfare.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "House Price Prediction",
+    des: "House Price Prediction is a machine learning model that predicts the price of a house based on its features.",
+    img: "/hp.png",
+    iconLists: ["/py.png", "/ML/sl.svg", "/ML/p.svg", "/ML/n.svg"],
+    link: "https://house-price-predictor-e7z4afvvrxp8sysznskwek.streamlit.app/",
+  },
+  {
+    id: 7,
+    title: "Loan Approval Prediction",
+    des: "Loan Approval Prediction is a machine learning model that predicts the approval of a loan based on its features.",
+    img: "/lp.png",
+    iconLists: ["/py.png", "/ML/sl.svg", "/ML/p.svg", "/ML/n.svg"],
+    link: "https://loan-approval-predictor-vwzb9jypgp5fulazhfh5mn.streamlit.app/",
   },
 ];
 
@@ -252,7 +276,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/twit.svg",
-    link: "https://twitter.com/sachinsamprit",
+    link: "https://x.com/Sachin1112005",
   },
   {
     id: 3,

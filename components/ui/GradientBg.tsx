@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
+import NeuralNetworkBg from "./NeuralNetworkBg";
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(108, 0, 162)",
@@ -17,6 +18,7 @@ export const BackgroundGradientAnimation = ({
   className,
   interactive = true,
   containerClassName,
+  showNeuralNetBg = true,
 }: {
   gradientBackgroundStart?: string;
   gradientBackgroundEnd?: string;
@@ -32,6 +34,7 @@ export const BackgroundGradientAnimation = ({
   className?: string;
   interactive?: boolean;
   containerClassName?: string;
+  showNeuralNetBg?: boolean;
 }) => {
   const interactiveRef = useRef<HTMLDivElement>(null);
 
@@ -93,6 +96,10 @@ export const BackgroundGradientAnimation = ({
         containerClassName
       )}
     >
+      {/* Neural Network Background Overlay */}
+      {showNeuralNetBg && (
+        <NeuralNetworkBg style={{ opacity: 0.18, zIndex: 1 }} />
+      )}
       <svg className="hidden">
         <defs>
           <filter id="blurMe">

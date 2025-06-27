@@ -6,11 +6,11 @@ import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
-
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import NeuralNetworkBg from "./NeuralNetworkBg";
 
 export const BentoGrid = ({
   className,
@@ -87,6 +87,96 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
+      {/* Neural Network background for id 1 */}
+      {id === 1 && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 1,
+            pointerEvents: "none",
+          }}
+        >
+          <NeuralNetworkBg style={{ opacity: 0.32, zIndex: 1 }} />
+        </div>
+      )}
+      {/* Data Table background for id 4 */}
+      {id === 4 && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 1,
+            pointerEvents: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              background: "rgba(20, 22, 50, 0.85)",
+              borderRadius: 12,
+              boxShadow: "0 2px 24px 0 rgba(108,0,162,0.12)",
+              padding: 12,
+              minWidth: 260,
+              maxWidth: 340,
+              opacity: 0.85,
+              fontSize: 12,
+              color: "#C1C2D3",
+              fontFamily: "monospace",
+              zIndex: 2,
+            }}
+          >
+            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead>
+                <tr style={{ color: "#CBACF9" }}>
+                  <th>Epoch</th>
+                  <th>Loss</th>
+                  <th>Accuracy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>0.693</td>
+                  <td>52.1%</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>0.512</td>
+                  <td>74.3%</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>0.401</td>
+                  <td>82.7%</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>0.312</td>
+                  <td>88.9%</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>0.271</td>
+                  <td>91.2%</td>
+                </tr>
+              </tbody>
+            </table>
+            <div
+              style={{
+                color: "#64DCFF",
+                marginTop: 4,
+                fontSize: 11,
+                textAlign: "right",
+              }}
+            >
+              NeuralNet Training Log
+            </div>
+          </div>
+        </div>
+      )}
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
@@ -99,8 +189,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -137,7 +228,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-            {id === 2 && <GridGlobe />}
+          {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -176,8 +267,9 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />

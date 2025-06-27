@@ -69,6 +69,7 @@ export const FloatingNav = ({
           backgroundColor: "rgba(17, 25, 40, 0.75)",
           borderRadius: "12px",
           border: "1px solid rgba(255, 255, 255, 0.125)",
+          fontFamily: "'Neue Aachen Pro', Arial, sans-serif",
         }}
       >
         {navItems.map((navItem: any, idx: number) => (
@@ -82,7 +83,7 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="text-xl !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
         {/* remove this login btn */}

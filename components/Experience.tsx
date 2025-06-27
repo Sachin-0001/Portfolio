@@ -1,50 +1,105 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import NeuralNetworkBg from "./ui/NeuralNetworkBg";
+
+const mlBadges = [
+  { name: "Neural Networks", icon: "/ML/tf.svg" },
+  { name: "Model Deployment", icon: "/ML/pt.svg" },
+  { name: "Data Science", icon: "/ML/sl.svg" },
+  { name: "Deep Learning", icon: "/ML/k.svg" },
+  { name: "NLP", icon: "/ML/p.svg" },
+  { name: "Computer Vision", icon: "/ML/n.svg" },
+];
+
+const techBadges = [
+  { name: "JavaScript", icon: "/js.png" },
+  { name: "TypeScript", icon: "/ts.svg" },
+  { name: "React", icon: "/re.svg" },
+  { name: "Next.js", icon: "/next.svg" },
+  // { name: "Node.js", icon: "/node.png" },
+  // { name: "Docker", icon: "/docker.png" },
+  // { name: "PostgreSQL", icon: "/postgres.png" },
+  { name: "MongoDB", icon: "/mongodb.png" },
+  // { name: "HTML", icon: "/html.png" },
+  { name: "CSS", icon: "/css.png" },
+  { name: "Tailwind", icon: "/tail.svg" },
+  { name: "Git", icon: "/git.svg" },
+  { name: "Java", icon: "/java.png" },
+  // { name: "Ansible", icon: "/Tech/ansible.svg" },
+  // { name: "Terraform", icon: "/Tech/terraform.svg" },
+];
 
 const Experience = () => {
+  // Simulate animated proficiency bars
+  const [proficiency, setProficiency] = useState<number[]>(
+    workExperience.map(() => 0)
+  );
+  useEffect(() => {
+    let frame: number;
+    function animate() {
+      setProficiency((prev) =>
+        prev.map((val, i) => {
+          const target = (workExperience[i] as any).proficiency ?? 0;
+          return val < target ? val + 0.5 : target;
+        })
+      );
+      setTimeout(() => {
+        setProficiency((current) => {
+          if (
+            current.some(
+              (val, i) => val < ((workExperience[i] as any).proficiency ?? 0)
+            )
+          ) {
+            animate();
+          }
+          return current;
+        });
+      }, 16);
+    }
+    animate();
+    return () => {};
+    // eslint-disable-next-line
+  }, []);
+
   return (
-    <div className="py-20 w-full" id="techstack">
+    <div
+      className="py-20 w-full relative overflow-hidden"
+      id="techstack"
+      style={{ fontFamily: "'Neue Aachen Pro', Arial, sans-serif" }}
+    >
+      {/* Neural Network background overlay */}
+      <NeuralNetworkBg style={{ opacity: 0.12, zIndex: 0 }} />
       <h1 className="heading">
         My <span className="text-purple">Tech Stack</span>
       </h1>
-
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              // add this border radius to make it more rounded so that the moving border is more realistic
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+      {/* ML Badges with icons */}
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 mt-10 mb-4 z-10 relative">
+        {mlBadges.map((badge) => (
+          <span
+            key={badge.name}
+            className="flex items-center gap-3 bg-purple-900/70 text-purple-200 px-6 py-3 rounded-full text-2xl font-semibold border border-purple-400/30 shadow-sm"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                {/* <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p> */}
-              </div>
-            </div>
-          </Button>
+            {badge.icon && (
+              <img src={badge.icon} alt={badge.name} className="w-7 h-7" />
+            )}
+            {badge.name}
+          </span>
+        ))}
+      </div>
+      {/* Tech Badges with icons */}
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 mb-8 z-10 relative">
+        {techBadges.map((badge) => (
+          <span
+            key={badge.name}
+            className="flex items-center gap-3 bg-purple-900/70 text-blue-200 px-6 py-3 rounded-full text-2xl font-semibold border border-blue-400/30 shadow-sm"
+          >
+            {badge.icon && (
+              <img src={badge.icon} alt={badge.name} className="w-7 h-7" />
+            )}
+            {badge.name}
+          </span>
         ))}
       </div>
     </div>
