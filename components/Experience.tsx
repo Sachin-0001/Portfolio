@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
 import NeuralNetworkBg from "./ui/NeuralNetworkBg";
 
 const mlBadges = [
