@@ -2,32 +2,49 @@ import React, { useEffect, useState } from "react";
 
 import { workExperience } from "@/data";
 import NeuralNetworkBg from "./ui/NeuralNetworkBg";
+import SkillRadar from "./ui/SkillRadar";
 
 const mlBadges = [
-  { name: "Neural Networks", icon: "/ML/tf.svg" },
-  { name: "Model Deployment", icon: "/ML/pt.svg" },
   { name: "Data Science", icon: "/ML/sl.svg" },
+  { name: "Neural Networks", icon: "/ML/tf.svg" },
   { name: "Deep Learning", icon: "/ML/k.svg" },
   { name: "NLP", icon: "/ML/p.svg" },
   { name: "Computer Vision", icon: "/ML/n.svg" },
+  // { name: "Model Deployment", icon: "/ML/pt.svg" },
 ];
 
 const techBadges = [
+  { name: "Next.js", icon: "/next.svg" },
+  { name: "React", icon: "/re.svg" },
   { name: "JavaScript", icon: "/js.png" },
   { name: "TypeScript", icon: "/ts.svg" },
-  { name: "React", icon: "/re.svg" },
-  { name: "Next.js", icon: "/next.svg" },
-  // { name: "Node.js", icon: "/node.png" },
+  { name: "Java", icon: "/java.png" },
+  { name: "Python", icon: "/py.png" },
+  { name: "C++", icon: "/c++.png" },
+  { name: "C", icon: "/c.png" },
+  { name: "Node.js", icon: "/node.png" },
   // { name: "Docker", icon: "/docker.png" },
   // { name: "PostgreSQL", icon: "/postgres.png" },
   { name: "MongoDB", icon: "/mongodb.png" },
-  // { name: "HTML", icon: "/html.png" },
+  { name: "HTML", icon: "/2.png" },
   { name: "CSS", icon: "/css.png" },
+  { name: "Bootstrap", icon: "/boot.png" },
   { name: "Tailwind", icon: "/tail.svg" },
   { name: "Git", icon: "/git.svg" },
-  { name: "Java", icon: "/java.png" },
   // { name: "Ansible", icon: "/Tech/ansible.svg" },
   // { name: "Terraform", icon: "/Tech/terraform.svg" },
+];
+
+// Skill data for the radar chart
+const skillData = [
+  { name: "React", level: 80, category: "Frontend", color: "#61DAFB" },
+  { name: "Next.js", level: 80, category: "Frontend", color: "#000000" },
+  { name: "JavaScript", level: 90, category: "Programming", color: "#F7DF1E" },
+  { name: "Python", level: 65, category: "Programming", color: "#3776AB" },
+  { name: "Machine Learning", level: 50, category: "AI/ML", color: "#FF6B6B" },
+  { name: "Node.js", level: 70, category: "Backend", color: "#339933" },
+  { name: "MongoDB", level: 65, category: "Database", color: "#47A248" },
+  { name: "TypeScript", level: 75, category: "Programming", color: "#3178C6" },
 ];
 
 const Experience = () => {
@@ -35,6 +52,8 @@ const Experience = () => {
   const [proficiency, setProficiency] = useState<number[]>(
     workExperience.map(() => 0)
   );
+  const [showSkillRadar, setShowSkillRadar] = useState(false);
+
   useEffect(() => {
     let frame: number;
     function animate() {
@@ -70,9 +89,29 @@ const Experience = () => {
     >
       {/* Neural Network background overlay */}
       <NeuralNetworkBg style={{ opacity: 0.12, zIndex: 0 }} />
-      <h1 className="heading">
+      <h1 className="heading mb-10">
         My <span className="text-purple">Tech Stack</span>
       </h1>
+
+      {/* AI Skill Analysis Button */}
+      <div className="text-center mb-8 z-10 relative">
+        <button
+          onClick={() => setShowSkillRadar(!showSkillRadar)}
+          className="flex items-center gap-2 px-6 py-3 bg-purple/20 text-purple rounded-full hover:bg-purple/30 transition-colors mx-auto border border-purple/30"
+        >
+          <span className="text-xl font-medium">
+            {showSkillRadar ? "Hide" : "Show"} AI Skill Analysis
+          </span>
+        </button>
+      </div>
+
+      {/* Skill Radar Chart */}
+      {showSkillRadar && (
+        <div className="mb-12 z-10 relative">
+          <SkillRadar skills={skillData} size="lg" />
+        </div>
+      )}
+
       {/* ML Badges with icons */}
       <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 mt-10 mb-4 z-10 relative">
         {mlBadges.map((badge) => (

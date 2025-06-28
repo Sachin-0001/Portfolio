@@ -78,6 +78,7 @@ export const projects = [
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     link: "https://text-utils-ecru-beta.vercel.app/",
+    tags: ["React", "JavaScript", "Bootstrap", "Web Development"],
   },
   {
     id: 2,
@@ -86,6 +87,7 @@ export const projects = [
     img: "/p2.png",
     iconLists: ["/2.png", "/css.png", "/js.png"],
     link: "https://visit-sa.vercel.app/",
+    tags: ["HTML", "CSS", "JavaScript", "Web Development"],
   },
   {
     id: 3,
@@ -94,6 +96,7 @@ export const projects = [
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     link: "/ui.aiimg.com",
+    tags: ["React", "JavaScript", "Tailwind CSS", "Web Development"],
   },
   {
     id: 4,
@@ -102,6 +105,7 @@ export const projects = [
     img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "https://code-chronicles-five.vercel.app/",
+    tags: ["Next.js", "JavaScript", "Tailwind CSS", "MongoDB", "Web Development","Full Stack"],
   },
   {
     id: 5,
@@ -110,6 +114,15 @@ export const projects = [
     img: "/ff.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/py.png", "/mongodb.png"],
     link: "https://fairfare.vercel.app/",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Python",
+      "MongoDB",
+      "Full Stack",
+    ],
   },
   {
     id: 6,
@@ -118,6 +131,14 @@ export const projects = [
     img: "/hp.png",
     iconLists: ["/py.png", "/ML/sl.svg", "/ML/p.svg", "/ML/n.svg"],
     link: "https://house-price-predictor-e7z4afvvrxp8sysznskwek.streamlit.app/",
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Streamlit",
+    ],
   },
   {
     id: 7,
@@ -126,6 +147,14 @@ export const projects = [
     img: "/lp.png",
     iconLists: ["/py.png", "/ML/sl.svg", "/ML/p.svg", "/ML/n.svg"],
     link: "https://loan-approval-predictor-vwzb9jypgp5fulazhfh5mn.streamlit.app/",
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Streamlit",
+    ],
   },
 ];
 

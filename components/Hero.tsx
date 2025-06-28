@@ -34,13 +34,18 @@ const Hero = () => {
           </p>
 
           <TextGenerateEffect
-            words="Hi! I'm Sachin, I build intelligent systems with Machine Learning."
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Hi! I'm Sachin,"
+            className="text-[40px] md:text-5xl lg:text-6xl"
+          />
+          <TextGenerateEffect
+            words="I'm into turning data into smart ideas."
+            className="text-[40px] md:text-5xl lg:text-6xl"
           />
 
           {/* ML subheading */}
           <p className="text-center mt-2 mb-4 text-sm md:text-lg lg:text-2xl text-purple-200 font-light">
-            Neural Networks • Data Science • Model Deployment • AI Solutions
+            Full Stack Developer • ML Explorer • AI in Progress • Building & Learning
+            Everyday
           </p>
 
           {/* Animated accuracy bar */}
@@ -56,7 +61,7 @@ const Hero = () => {
             ></div>
           </div>
           <div className="w-full max-w-xs text-center text-purple-200 font-mono text-sm mb-6">
-            Model Accuracy: {accuracy.toFixed(1)}%
+            Building Accuracy: {accuracy.toFixed(1)}%
           </div>
 
           <a href="#projects">
