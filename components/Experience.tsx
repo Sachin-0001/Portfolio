@@ -37,14 +37,17 @@ const techBadges = [
 
 // Skill data for the radar chart
 const skillData = [
-  { name: "React", level: 80, category: "Frontend", color: "#61DAFB" },
-  { name: "Next.js", level: 80, category: "Frontend", color: "#000000" },
-  { name: "JavaScript", level: 90, category: "Programming", color: "#F7DF1E" },
-  { name: "Python", level: 65, category: "Programming", color: "#3776AB" },
-  { name: "Machine Learning", level: 50, category: "AI/ML", color: "#FF6B6B" },
-  { name: "Node.js", level: 70, category: "Backend", color: "#339933" },
-  { name: "MongoDB", level: 65, category: "Database", color: "#47A248" },
-  { name: "TypeScript", level: 75, category: "Programming", color: "#3178C6" },
+  { name: "React", level: 80, category: "Frontend", color: "#61DAFB" }, // official
+  { name: "Next.js", level: 80, category: "Frontend", color: "#000000" }, // official (black)
+  { name: "JavaScript", level: 90, category: "Programming", color: "#F7DF1E" }, // official yellow
+  { name: "Python", level: 65, category: "Programming", color: "#3776AB" }, // official
+  { name: "Machine Learning", level: 50, category: "AI/ML", color: "#FF6B6B" }, // custom (warm red for AI)
+  { name: "Node.js", level: 70, category: "Backend", color: "#339933" }, // official green
+  { name: "MongoDB", level: 65, category: "Database", color: "#47A248" }, // official green
+  { name: "TypeScript", level: 75, category: "Programming", color: "#3178C6" }, // official blue
+  { name: "Java", level: 60, category: "Programming", color: "#EA2D2E" }, // red from official Oracle Java logo
+  { name: "C++", level: 75, category: "Programming", color: "#00599C" }, // official ISO C++ blue
+  { name: "Tailwind", level: 90, category: "Frontend", color: "#38BDF8" }, // official
 ];
 
 const Experience = () => {
