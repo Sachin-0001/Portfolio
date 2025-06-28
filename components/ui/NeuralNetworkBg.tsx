@@ -51,6 +51,7 @@ const NeuralNetworkBg: React.FC<{
     }
 
     function animate(t: number) {
+      if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
       // Draw connections
       for (let l = 0; l < LAYER_COUNT - 1; l++) {
