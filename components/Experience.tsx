@@ -10,6 +10,7 @@ const mlBadges = [
   { name: "Deep Learning", icon: "/ML/k.svg" },
   { name: "NLP", icon: "/ML/p.svg" },
   { name: "Computer Vision", icon: "/ML/n.svg" },
+  {name:"Streamlit", icon:"/Streamlit.svg"}
   // { name: "Model Deployment", icon: "/ML/pt.svg" },
 ];
 

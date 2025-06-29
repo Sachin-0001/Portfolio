@@ -95,7 +95,7 @@ export const projects = [
     des: "iNotebook is a secure and user-friendly digital notebook for storing and managing notes effortlessly.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://code-chronicles-five.vercel.app/",
     tags: ["React", "JavaScript", "Tailwind CSS", "Web Development"],
   },
   {

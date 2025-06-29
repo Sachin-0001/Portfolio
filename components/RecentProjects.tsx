@@ -140,7 +140,7 @@ const RecentProjects = () => {
                 {/* Tags display */}
                 {item.tags && (
                   <div className="flex flex-wrap gap-1 mb-3">
-                    {item.tags.slice(0, 3).map((tag, index) => (
+                    {item.tags.slice(0,3).map((tag, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 text-xs bg-purple/20 text-purple rounded-full border border-purple/30"
