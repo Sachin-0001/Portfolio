@@ -13,7 +13,7 @@ const Footer = () => {
       {/* background grid */}
 
       <div
-        className="flex flex-col items-center sm:flex flex-col items-center gap-5">
+        className="flex flex-col items-center sm:gap-5">
         <h1 className="heading lg:max-w-[45vw]">Reach Out</h1>
         <a href="mailto:sachin.samprit@gmail.com">
           <MagicButton
