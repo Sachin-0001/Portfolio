@@ -126,6 +126,15 @@ export const projects = [
     link: "https://finance-dashboard-7xpxgiwawqe4a45cyqkjzn.streamlit.app/",
     tags: ["Python", "Pandas", "Streamlit", "Data Science"],
   },
+  {
+    id: 10,
+    title: "Chat with docs",
+    des: "Analyse docs and query into them using LLMs",
+    img: "/cwd.png",
+    iconLists: ["/py.png", "/Streamlit.svg"],
+    link: "https://chat-with-docs-s4ruhadck7ivgqbtomwsne.streamlit.app/",
+    tags: ["Python", "Streamlit", "Machine Learning", "LLMs"],
+  },
 ];
 
 
