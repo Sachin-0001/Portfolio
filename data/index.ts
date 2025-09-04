@@ -135,6 +135,15 @@ export const projects = [
     link: "https://chat-with-docs-s4ruhadck7ivgqbtomwsne.streamlit.app/",
     tags: ["Python", "Streamlit", "Machine Learning", "LLMs"],
   },
+  {
+    id: 11,
+    title: "UnBind",
+    des: "UnBind turns complex legal language into plain English, flags risks, and suggests fair alternatives — all in minutes.",
+    img: "/ub.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mongodb.png"],
+    link: "https://un-bind.vercel.app/",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Full Stack", "LLMs"],
+  },
 ];
 
 
